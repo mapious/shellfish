@@ -1,0 +1,1861 @@
+{
+    "version": 8,
+    "name": "Shellfish",
+    "metadata": {
+        "mapbox:autocomposite": true,
+        "mapbox:type": "default",
+        "mapbox:origin": "light-v9",
+        "mapbox:groups": {
+            "1444934295202.7542": {
+                "name": "Admin boundaries",
+                "collapsed": true
+            },
+            "1444856151690.9143": {
+                "name": "State labels",
+                "collapsed": true
+            },
+            "1444856144497.7825": {
+                "name": "Country labels",
+                "collapsed": true
+            },
+            "1456969573402.7817": {
+                "name": "Hillshading",
+                "collapsed": true
+            },
+            "1444862510685.128": {
+                "name": "City labels",
+                "collapsed": false
+            },
+            "330d3cf0dc0f6e62633d98906c712841": {
+                "name": "Group",
+                "collapsed": true
+            }
+        },
+        "mapbox:trackposition": false
+    },
+    "center": [
+        -136.34325139030585,
+        50.95474544876518
+    ],
+    "zoom": 4.687486416154319,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+        "composite": {
+            "url": "mapbox://mapbox.mapbox-streets-v7,mapbox.mapbox-terrain-v2",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/katzbr/cj98q07zp1rdq2sthjwng5xci",
+    "glyphs": "mapbox://fonts/katzbr/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "background-color": "#80a0a0",
+                "background-opacity": 1
+            }
+        },
+        {
+            "id": "sand",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "landuse",
+            "filter": [
+                "==",
+                "class",
+                "sand"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "hsla(30, 25%, 50%, 0.55)",
+                "fill-opacity": 0.5,
+                "fill-outline-color": "#a08060"
+            }
+        },
+        {
+            "id": "hillshade_highlight_bright",
+            "type": "fill",
+            "metadata": {
+                "mapbox:group": "1456969573402.7817"
+            },
+            "source": "composite",
+            "source-layer": "hillshade",
+            "maxzoom": 16,
+            "filter": [
+                "==",
+                "level",
+                94
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "hsl(240, 20%, 85%)",
+                "fill-opacity": {
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            2.9,
+                            0
+                        ],
+                        [
+                            4,
+                            0.1
+                        ],
+                        [
+                            11,
+                            0.25
+                        ],
+                        [
+                            15,
+                            0.25
+                        ]
+                    ]
+                },
+                "fill-antialias": false
+            }
+        },
+        {
+            "id": "hillshade_highlight_med",
+            "type": "fill",
+            "metadata": {
+                "mapbox:group": "1456969573402.7817"
+            },
+            "source": "composite",
+            "source-layer": "hillshade",
+            "maxzoom": 16,
+            "filter": [
+                "==",
+                "level",
+                90
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "#c0c0e0",
+                "fill-opacity": {
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            2.9,
+                            0
+                        ],
+                        [
+                            4,
+                            0.1
+                        ],
+                        [
+                            11,
+                            0.25
+                        ],
+                        [
+                            15,
+                            0.25
+                        ]
+                    ]
+                },
+                "fill-antialias": false
+            }
+        },
+        {
+            "id": "hillshade_shadow_faint",
+            "type": "fill",
+            "metadata": {
+                "mapbox:group": "1456969573402.7817"
+            },
+            "source": "composite",
+            "source-layer": "hillshade",
+            "maxzoom": 16,
+            "filter": [
+                "==",
+                "level",
+                89
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "hsl(240, 7%, 73%)",
+                "fill-opacity": {
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            2.9,
+                            0
+                        ],
+                        [
+                            4,
+                            0.1
+                        ],
+                        [
+                            11,
+                            0.25
+                        ],
+                        [
+                            15,
+                            0.25
+                        ]
+                    ]
+                },
+                "fill-antialias": false
+            }
+        },
+        {
+            "id": "hillshade_shadow_med",
+            "type": "fill",
+            "metadata": {
+                "mapbox:group": "1456969573402.7817"
+            },
+            "source": "composite",
+            "source-layer": "hillshade",
+            "maxzoom": 16,
+            "filter": [
+                "==",
+                "level",
+                78
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-antialias": false,
+                "fill-opacity": {
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            2.9,
+                            0
+                        ],
+                        [
+                            4,
+                            0.1
+                        ],
+                        [
+                            11,
+                            0.25
+                        ],
+                        [
+                            15,
+                            0.25
+                        ]
+                    ]
+                },
+                "fill-color": "hsl(240, 12%, 72%)"
+            }
+        },
+        {
+            "id": "hillshade_shadow_dark",
+            "type": "fill",
+            "metadata": {
+                "mapbox:group": "1456969573402.7817"
+            },
+            "source": "composite",
+            "source-layer": "hillshade",
+            "maxzoom": 16,
+            "filter": [
+                "==",
+                "level",
+                67
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-antialias": false,
+                "fill-opacity": {
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            2.9,
+                            0
+                        ],
+                        [
+                            4,
+                            0.1
+                        ],
+                        [
+                            11,
+                            0.25
+                        ],
+                        [
+                            15,
+                            0.25
+                        ]
+                    ]
+                },
+                "fill-color": "hsl(240, 16%, 70%)"
+            }
+        },
+        {
+            "id": "hillshade_shadow_extreme",
+            "type": "fill",
+            "metadata": {
+                "mapbox:group": "1456969573402.7817"
+            },
+            "source": "composite",
+            "source-layer": "hillshade",
+            "maxzoom": 16,
+            "filter": [
+                "==",
+                "level",
+                56
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "#a0a0c0",
+                "fill-opacity": {
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            2.9,
+                            0
+                        ],
+                        [
+                            4,
+                            0.1
+                        ],
+                        [
+                            11,
+                            0.25
+                        ],
+                        [
+                            15,
+                            0.25
+                        ]
+                    ]
+                },
+                "fill-antialias": false
+            }
+        },
+        {
+            "id": "waterway-river-canal",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "waterway",
+            "minzoom": 8,
+            "filter": [
+                "any",
+                [
+                    "==",
+                    "class",
+                    "canal"
+                ],
+                [
+                    "==",
+                    "class",
+                    "river"
+                ]
+            ],
+            "layout": {
+                "line-cap": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "butt"
+                        ],
+                        [
+                            11,
+                            "round"
+                        ]
+                    ]
+                },
+                "line-join": "round"
+            },
+            "paint": {
+                "line-color": "#c0c0e0",
+                "line-width": {
+                    "base": 1.3,
+                    "stops": [
+                        [
+                            4.5,
+                            0.5
+                        ],
+                        [
+                            8.5,
+                            1
+                        ],
+                        [
+                            10,
+                            2
+                        ]
+                    ]
+                },
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            4,
+                            0
+                        ],
+                        [
+                            4.5,
+                            1
+                        ]
+                    ]
+                },
+                "line-blur": 1
+            }
+        },
+        {
+            "id": "water",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "water",
+            "layout": {},
+            "paint": {
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            1
+                        ],
+                        [
+                            22,
+                            1
+                        ]
+                    ]
+                },
+                "fill-color": "hsl(180, 14%, 72%)",
+                "fill-outline-color": "hsla(240, 34%, 82%, 0.85)"
+            }
+        },
+        {
+            "id": "admin-3-4-boundaries",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "1444934295202.7542"
+            },
+            "source": "composite",
+            "source-layer": "admin",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "maritime",
+                    0
+                ],
+                [
+                    ">=",
+                    "admin_level",
+                    3
+                ]
+            ],
+            "layout": {
+                "line-join": "round",
+                "line-cap": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-dasharray": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            6,
+                            [
+                                2,
+                                0
+                            ]
+                        ],
+                        [
+                            7,
+                            [
+                                2,
+                                2,
+                                6,
+                                2
+                            ]
+                        ]
+                    ]
+                },
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7,
+                            0.75
+                        ],
+                        [
+                            12,
+                            1.5
+                        ]
+                    ]
+                },
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            2.99,
+                            0
+                        ],
+                        [
+                            3,
+                            0.1
+                        ],
+                        [
+                            4,
+                            0.25
+                        ],
+                        [
+                            10,
+                            1
+                        ]
+                    ]
+                },
+                "line-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            4,
+                            "hsl(0, 0%, 80%)"
+                        ],
+                        [
+                            5,
+                            "hsl(0, 0%, 70%)"
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "admin-2-boundaries",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "1444934295202.7542"
+            },
+            "source": "composite",
+            "source-layer": "admin",
+            "minzoom": 1,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "admin_level",
+                    2
+                ],
+                [
+                    "==",
+                    "disputed",
+                    0
+                ],
+                [
+                    "==",
+                    "maritime",
+                    0
+                ]
+            ],
+            "layout": {
+                "line-join": "round",
+                "line-cap": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            3,
+                            "hsl(0, 0%, 70%)"
+                        ],
+                        [
+                            4,
+                            "hsl(0, 0%, 62%)"
+                        ]
+                    ]
+                },
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            3,
+                            0.5
+                        ],
+                        [
+                            10,
+                            2
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    1,
+                    2
+                ],
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            6,
+                            0
+                        ],
+                        [
+                            7,
+                            0.25
+                        ],
+                        [
+                            8,
+                            1
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "waterway-label",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "waterway_label",
+            "minzoom": 12,
+            "filter": [
+                "in",
+                "class",
+                "canal",
+                "river"
+            ],
+            "layout": {
+                "text-field": "{name_en}",
+                "text-font": [
+                    "Clan Offc Pro Narrow Medium Italic",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "text-pitch-alignment": "viewport",
+                "text-max-angle": 30,
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            11,
+                            12
+                        ],
+                        [
+                            13,
+                            16
+                        ],
+                        [
+                            15,
+                            20
+                        ]
+                    ]
+                },
+                "text-letter-spacing": 0.1
+            },
+            "paint": {
+                "text-halo-color": "#c0c0e0",
+                "text-halo-width": 1.5,
+                "text-color": "#a0a0c0",
+                "text-halo-blur": 0.5
+            }
+        },
+        {
+            "id": "place-islets-archipelago-aboriginal",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "place_label",
+            "maxzoom": 16,
+            "filter": [
+                "in",
+                "type",
+                "aboriginal_lands",
+                "archipelago",
+                "islet"
+            ],
+            "layout": {
+                "text-line-height": 1.2,
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            11
+                        ],
+                        [
+                            18,
+                            16
+                        ]
+                    ]
+                },
+                "text-max-angle": 38,
+                "symbol-spacing": 250,
+                "text-font": [
+                    "Clan Offc Pro Medium Italic",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-padding": 2,
+                "text-offset": [
+                    0,
+                    0
+                ],
+                "text-field": "{name_en}",
+                "text-letter-spacing": 0.01,
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "hsl(240, 13%, 86%)",
+                "text-halo-color": "#80a0a0",
+                "text-halo-width": 1,
+                "text-halo-blur": 0.1,
+                "text-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            4.9,
+                            0
+                        ],
+                        [
+                            5,
+                            1
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "place-village",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "place_label",
+            "minzoom": 11,
+            "maxzoom": 15,
+            "filter": [
+                "==",
+                "type",
+                "village"
+            ],
+            "layout": {
+                "text-field": "{name_en}",
+                "text-font": [
+                    "Clan Offc Pro Medium",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-max-width": 7,
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7,
+                            11.5
+                        ],
+                        [
+                            16,
+                            18
+                        ]
+                    ]
+                },
+                "text-offset": [
+                    0,
+                    0
+                ],
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-halo-color": "#80a0a0",
+                "text-halo-width": 1,
+                "text-color": "hsl(240, 13%, 86%)",
+                "text-halo-blur": 0.1
+            }
+        },
+        {
+            "id": "place-town",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "place_label",
+            "minzoom": 7,
+            "maxzoom": 15,
+            "filter": [
+                "==",
+                "type",
+                "town"
+            ],
+            "layout": {
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7,
+                            11.5
+                        ],
+                        [
+                            15,
+                            20
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Clan Offc Pro Medium",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-padding": 2,
+                "text-offset": [
+                    0,
+                    0
+                ],
+                "text-field": "{name_en}",
+                "text-max-width": 7,
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "hsl(240, 13%, 86%)",
+                "text-halo-color": "#80a0a0",
+                "text-halo-width": 1,
+                "icon-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7.99,
+                            1
+                        ],
+                        [
+                            8,
+                            0
+                        ]
+                    ]
+                },
+                "text-halo-blur": 0.1
+            }
+        },
+        {
+            "id": "place-islands",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "place_label",
+            "maxzoom": 16,
+            "filter": [
+                "==",
+                "type",
+                "island"
+            ],
+            "layout": {
+                "text-line-height": 1.2,
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            11
+                        ],
+                        [
+                            18,
+                            16
+                        ]
+                    ]
+                },
+                "text-max-angle": 38,
+                "symbol-spacing": 250,
+                "text-font": [
+                    "Clan Offc Pro Medium Italic",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-padding": 2,
+                "text-offset": [
+                    0,
+                    0
+                ],
+                "text-field": "{name_en}",
+                "text-letter-spacing": 0.01,
+                "text-max-width": 7
+            },
+            "paint": {
+                "text-color": "hsl(240, 13%, 86%)",
+                "text-halo-color": "#80a0a0",
+                "text-halo-width": 1,
+                "text-halo-blur": 0.1,
+                "text-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            3.9,
+                            0
+                        ],
+                        [
+                            4,
+                            1
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "place-city-sm",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1444862510685.128"
+            },
+            "source": "composite",
+            "source-layer": "place_label",
+            "maxzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "!in",
+                    "scalerank",
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                [
+                    "==",
+                    "type",
+                    "city"
+                ]
+            ],
+            "layout": {
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            6,
+                            12
+                        ],
+                        [
+                            14,
+                            22
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Clan Offc Pro Medium",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-offset": [
+                    0,
+                    0
+                ],
+                "text-field": "{name_en}",
+                "text-max-width": 7,
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "hsl(240, 13%, 86%)",
+                "text-halo-blur": 0.1,
+                "text-halo-color": "#80a0a0",
+                "icon-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7.99,
+                            1
+                        ],
+                        [
+                            8,
+                            0
+                        ]
+                    ]
+                },
+                "text-halo-width": 1,
+                "text-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            5.8,
+                            0
+                        ],
+                        [
+                            5.9,
+                            1
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "place-city-md-s",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1444862510685.128"
+            },
+            "source": "composite",
+            "source-layer": "place_label",
+            "maxzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "type",
+                    "city"
+                ],
+                [
+                    "in",
+                    "ldir",
+                    "E",
+                    "S",
+                    "SE",
+                    "SW"
+                ],
+                [
+                    "in",
+                    "scalerank",
+                    3,
+                    4,
+                    5
+                ]
+            ],
+            "layout": {
+                "text-field": "{name_en}",
+                "text-size": {
+                    "base": 0.9,
+                    "stops": [
+                        [
+                            5,
+                            12
+                        ],
+                        [
+                            12,
+                            22
+                        ]
+                    ]
+                },
+                "text-anchor": "top",
+                "text-offset": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7.99,
+                            [
+                                0,
+                                0.1
+                            ]
+                        ],
+                        [
+                            8,
+                            [
+                                0,
+                                0
+                            ]
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Clan Offc Pro Medium",
+                    "Arial Unicode MS Regular"
+                ],
+                "icon-image": "dot-10",
+                "text-max-width": 10
+            },
+            "paint": {
+                "text-halo-color": "#80a0a0",
+                "icon-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            5.9,
+                            0
+                        ],
+                        [
+                            6,
+                            1
+                        ],
+                        [
+                            7.99,
+                            1
+                        ],
+                        [
+                            8,
+                            0
+                        ]
+                    ]
+                },
+                "text-color": "hsl(240, 13%, 86%)",
+                "text-halo-blur": 0.1,
+                "text-halo-width": 1,
+                "text-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            5.8,
+                            0
+                        ],
+                        [
+                            5.9,
+                            1
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "place-city-md-n",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1444862510685.128"
+            },
+            "source": "composite",
+            "source-layer": "place_label",
+            "maxzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "type",
+                    "city"
+                ],
+                [
+                    "in",
+                    "ldir",
+                    "N",
+                    "NE",
+                    "NW",
+                    "W"
+                ],
+                [
+                    "in",
+                    "scalerank",
+                    3,
+                    4,
+                    5
+                ]
+            ],
+            "layout": {
+                "text-size": {
+                    "base": 0.9,
+                    "stops": [
+                        [
+                            5,
+                            12
+                        ],
+                        [
+                            12,
+                            22
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Clan Offc Pro Medium",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-offset": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7.99,
+                            [
+                                0,
+                                -0.25
+                            ]
+                        ],
+                        [
+                            8,
+                            [
+                                0,
+                                0
+                            ]
+                        ]
+                    ]
+                },
+                "text-anchor": "bottom",
+                "text-field": "{name_en}",
+                "text-max-width": 7,
+                "icon-image": "dot-10"
+            },
+            "paint": {
+                "text-color": "hsl(240, 13%, 86%)",
+                "text-halo-blur": 0.1,
+                "text-halo-color": "#80a0a0",
+                "icon-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            5.9,
+                            0
+                        ],
+                        [
+                            6,
+                            1
+                        ],
+                        [
+                            7.99,
+                            1
+                        ],
+                        [
+                            8,
+                            0
+                        ]
+                    ]
+                },
+                "text-halo-width": 1,
+                "text-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            5.8,
+                            0
+                        ],
+                        [
+                            5.9,
+                            1
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "place-city-lg-s",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1444862510685.128"
+            },
+            "source": "composite",
+            "source-layer": "place_label",
+            "minzoom": 1,
+            "maxzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "<=",
+                    "scalerank",
+                    2
+                ],
+                [
+                    "==",
+                    "type",
+                    "city"
+                ],
+                [
+                    "in",
+                    "ldir",
+                    "E",
+                    "S",
+                    "SE",
+                    "SW"
+                ]
+            ],
+            "layout": {
+                "text-size": {
+                    "base": 0.9,
+                    "stops": [
+                        [
+                            3,
+                            10
+                        ],
+                        [
+                            10,
+                            22
+                        ]
+                    ]
+                },
+                "icon-image": "dot-11",
+                "text-font": [
+                    "Clan Offc Pro Medium",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-offset": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7.99,
+                            [
+                                0,
+                                0.15
+                            ]
+                        ],
+                        [
+                            8,
+                            [
+                                0,
+                                0
+                            ]
+                        ]
+                    ]
+                },
+                "icon-size": 1,
+                "text-anchor": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7,
+                            "top"
+                        ],
+                        [
+                            8,
+                            "center"
+                        ]
+                    ]
+                },
+                "text-field": "{name_en}",
+                "text-max-width": 7
+            },
+            "paint": {
+                "text-color": "hsl(240, 13%, 86%)",
+                "text-halo-blur": 0.1,
+                "text-halo-color": "#80a0a0",
+                "icon-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            4.9,
+                            0
+                        ],
+                        [
+                            5,
+                            1
+                        ],
+                        [
+                            7.99,
+                            1
+                        ],
+                        [
+                            8,
+                            0
+                        ]
+                    ]
+                },
+                "text-halo-width": 1,
+                "text-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            4.8,
+                            0
+                        ],
+                        [
+                            4.9,
+                            1
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "place-city-lg-n",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1444862510685.128"
+            },
+            "source": "composite",
+            "source-layer": "place_label",
+            "minzoom": 1,
+            "maxzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "<=",
+                    "scalerank",
+                    2
+                ],
+                [
+                    "==",
+                    "type",
+                    "city"
+                ],
+                [
+                    "in",
+                    "ldir",
+                    "N",
+                    "NE",
+                    "NW",
+                    "W"
+                ]
+            ],
+            "layout": {
+                "text-size": {
+                    "base": 0.9,
+                    "stops": [
+                        [
+                            3,
+                            10
+                        ],
+                        [
+                            10,
+                            22
+                        ]
+                    ]
+                },
+                "icon-image": "dot-11",
+                "text-font": [
+                    "Clan Offc Pro Medium",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-offset": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7.99,
+                            [
+                                0,
+                                -0.25
+                            ]
+                        ],
+                        [
+                            8,
+                            [
+                                0,
+                                0
+                            ]
+                        ]
+                    ]
+                },
+                "icon-size": 1,
+                "text-anchor": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7,
+                            "bottom"
+                        ],
+                        [
+                            8,
+                            "center"
+                        ]
+                    ]
+                },
+                "text-field": "{name_en}",
+                "text-max-width": 7
+            },
+            "paint": {
+                "text-halo-color": "#80a0a0",
+                "text-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            4.8,
+                            0
+                        ],
+                        [
+                            4.9,
+                            1
+                        ]
+                    ]
+                },
+                "text-halo-blur": 0.1,
+                "text-color": "hsl(240, 13%, 86%)",
+                "icon-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            4.9,
+                            0
+                        ],
+                        [
+                            5,
+                            1
+                        ],
+                        [
+                            7.99,
+                            1
+                        ],
+                        [
+                            8,
+                            0
+                        ]
+                    ]
+                },
+                "text-halo-width": 1
+            }
+        },
+        {
+            "id": "state-label-lg",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1444856151690.9143"
+            },
+            "source": "composite",
+            "source-layer": "state_label",
+            "minzoom": 3,
+            "maxzoom": 7,
+            "filter": [
+                "in",
+                "name",
+                "",
+                "Alaska",
+                "British Columbia",
+                "California",
+                "Oregon",
+                "Washington"
+            ],
+            "layout": {
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            4,
+                            12
+                        ],
+                        [
+                            7,
+                            28
+                        ]
+                    ]
+                },
+                "text-max-width": 6,
+                "text-font": [
+                    "Clan Offc Pro Narrow Medium",
+                    "Arial Unicode MS Bold"
+                ],
+                "text-padding": 1,
+                "text-field": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "{abbr}"
+                        ],
+                        [
+                            1,
+                            "{name_en}"
+                        ]
+                    ]
+                },
+                "text-letter-spacing": 0.15,
+                "text-transform": "uppercase"
+            },
+            "paint": {
+                "text-opacity": 1,
+                "text-color": "hsl(240, 13%, 86%)",
+                "text-halo-blur": 0,
+                "text-halo-width": 0.25,
+                "text-halo-color": "#A0A0C0"
+            }
+        },
+        {
+            "id": "country-label-lg",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "1444856144497.7825"
+            },
+            "source": "composite",
+            "source-layer": "country_label",
+            "minzoom": 1,
+            "maxzoom": 7,
+            "filter": [
+                "in",
+                "name",
+                "",
+                "Canada",
+                "United States"
+            ],
+            "layout": {
+                "text-field": "{name_en}",
+                "text-max-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            5
+                        ],
+                        [
+                            3,
+                            6
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Clan SC Offc Pro Narrow Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            2,
+                            16
+                        ],
+                        [
+                            6,
+                            24
+                        ]
+                    ]
+                },
+                "visibility": "visible",
+                "text-line-height": 1.2,
+                "text-rotate": 0
+            },
+            "paint": {
+                "text-color": "hsl(240, 13%, 86%)",
+                "text-halo-color": "hsla(240, 51%, 76%, 0.5)",
+                "text-halo-blur": 0,
+                "text-halo-width": 0.25,
+                "text-opacity": {
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            1.9,
+                            0
+                        ],
+                        [
+                            2,
+                            1
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "marine-label-sm-pt",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "330d3cf0dc0f6e62633d98906c712841"
+            },
+            "source": "composite",
+            "source-layer": "marine_label",
+            "minzoom": 3,
+            "maxzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    ">=",
+                    "labelrank",
+                    4
+                ]
+            ],
+            "layout": {
+                "text-field": "{name_en}",
+                "text-max-width": 5,
+                "text-letter-spacing": 0.1,
+                "text-line-height": 1.5,
+                "text-font": [
+                    "Clan SC Offc Pro Medium Italic",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            1,
+                            14
+                        ],
+                        [
+                            4,
+                            30
+                        ]
+                    ]
+                },
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-halo-blur": 0,
+                "text-color": "#a0a0c0",
+                "text-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            1.9,
+                            0
+                        ],
+                        [
+                            2,
+                            1
+                        ]
+                    ]
+                },
+                "text-halo-color": "#c0c0e0",
+                "text-halo-width": 0.25
+            }
+        },
+        {
+            "id": "marine-label-lg-pt",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "330d3cf0dc0f6e62633d98906c712841"
+            },
+            "source": "composite",
+            "source-layer": "marine_label",
+            "minzoom": 1,
+            "maxzoom": 4,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "labelrank",
+                        1
+                    ],
+                    [
+                        "in",
+                        "name",
+                        "",
+                        "North Pacific Ocean"
+                    ]
+                ]
+            ],
+            "layout": {
+                "text-field": "{name_en}",
+                "text-max-width": 4,
+                "text-letter-spacing": 0.25,
+                "text-line-height": 1.5,
+                "text-font": [
+                    "Clan SC Offc Pro Medium Italic",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": 14,
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-halo-blur": 0,
+                "text-color": "#a0a0c0",
+                "text-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            1.9,
+                            0
+                        ],
+                        [
+                            2,
+                            1
+                        ]
+                    ]
+                },
+                "text-halo-color": "#c0c0e0",
+                "text-halo-width": 0.25
+            }
+        },
+        {
+            "id": "marine-label-all",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "330d3cf0dc0f6e62633d98906c712841"
+            },
+            "source": "composite",
+            "source-layer": "marine_label",
+            "filter": [
+                "in",
+                "name",
+                "",
+                "Gulf of Alaska",
+                "Hecate Strait"
+            ],
+            "layout": {
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-font": [
+                    "Clan SC Offc Pro Medium Italic",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-letter-spacing": 0.25,
+                "text-line-height": 1.25,
+                "text-max-width": 4,
+                "text-padding": 25,
+                "text-size": 14
+            },
+            "paint": {
+                "text-color": "#a0a0c0",
+                "text-halo-color": "#c0c0e0",
+                "text-halo-width": 0.5,
+                "text-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            1.9,
+                            0
+                        ],
+                        [
+                            2,
+                            1
+                        ]
+                    ]
+                }
+            }
+        }
+    ],
+    "created": "2017-10-26T17:06:08.767Z",
+    "id": "cj98q07zp1rdq2sthjwng5xci",
+    "modified": "2017-11-02T02:49:20.924Z",
+    "owner": "katzbr",
+    "visibility": "private",
+    "draft": false
+}
